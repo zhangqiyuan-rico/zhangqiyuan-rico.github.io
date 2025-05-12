@@ -51,6 +51,8 @@
     margin-right: auto;
   }
   /* --- Narrow overall page width & center content --- */
+    /* Override Bulma's own breakpoints with !important so it always applies */
+    .container {max-width: 900px !important; margin-left:auto !important; margin-right:auto !important;}
     .hero-body>.container,
     .section>.container {
       max-width: 920px;   /* set any width you prefer */
@@ -58,6 +60,7 @@
       margin-right: auto;
     }
   </style>
+
 </head>
 <body>
   <!-- HERO -->
