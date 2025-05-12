@@ -27,7 +27,9 @@
   </script>
 
   <!--  Custom styles  -->
-  <style>
+ <style>
+    /* --- Override hero subtitle margin to prevent overlap --- */
+    .hero .subtitle {margin-top:0.25rem!important;}
     :root {
       --accent:#c0392b;
       --bg:#f9f9f9;
@@ -48,21 +50,15 @@
 </head>
 <body>
   <!-- HERO -->
-<section class="hero is-light">
-  <div class="hero-body">
-    <div class="container
-                is-flex
-                is-flex-wrap-wrap
-                is-align-items-flex-start
-                is-flex-direction-column-mobile">
-      <figure class="image is-128x128 mr-5 mb-4">
-        <img class="is-rounded" src="images/zqy.jpg" alt="Qiyuan Zhang">
-      </figure>
-      <div style="max-width:400px;">
-        <h1 class="title is-2 mb-1">Qiyuan Zhang</h1>
-        <p class="subtitle is-5 mb-3">
-          Ph.D. Student · City University of Hong Kong
-        </p>
+  <section class="hero is-light">
+    <div class="hero-body">
+      <div class="container is-flex is-align-items-center is-flex-wrap-wrap">
+        <figure class="image is-128x128 mr-5 mb-4">
+          <img class="is-rounded" src="images/zqy.jpg" alt="Qiyuan Zhang">
+        </figure>
+        <div>
+          <h1 class="title is-2 mb-1">Qiyuan Zhang</h1>
+          <p class="subtitle is-5 mb-3">Ph.D. Student · City University of Hong Kong</p>
           <div class="buttons">
             <a class="button is-link is-light" href="mailto:qiyuanzhang97@gmail.com"><span class="icon"><i class="fas fa-envelope"></i></span><span>Email</span></a>
             <a class="button is-dark is-light" href="https://scholar.google.com/citations?user=7LZAo0EAAAAJ"><span class="icon"><i class="ai ai-google-scholar"></i></span><span>Scholar</span></a>
