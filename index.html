@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Qiyuan Zhang – Homepage</title>
+  <meta name="description" content="Qiyuan Zhang – Ph.D. student at City University of Hong Kong. Research on auto‑evaluation, reward modeling, and test‑time scaling."/>
+
+  <!--  Favicon  -->
+  <link rel="icon" type="image/jpeg" href="/images/cityuhk.jpg"/>
+
+  <!--  Google Font  -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!--  Bulma CSS  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/>
+
+  <!--  Font Awesome & Academicons  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"/>
+
+  <!--  Custom variables + tweaks  -->
+  <style>
+    :root {
+      --accent: #c0392b;          /* brand red */
+      --bg: #f9f9f9;              /* light gray background */
+      --text-dark: #222;
+      --text-light: #666;
+    }
+
+    html {font-family: 'Inter', system-ui, sans-serif; scroll-behavior:smooth;}
+    body {background: var(--bg); color: var(--text-dark);}  
+
+    /*  Timeline  */
+    .timeline {list-style:none; padding-left:0; border-left:4px solid var(--accent);}
+    .timeline li {position:relative; padding-left:1.25rem; margin-bottom:1rem;}
+    .timeline-date {font-weight:600; color:var(--accent);}   
+    .timeline li::before {content:''; position:absolute; left:-9px; top:6px; width:10px; height:10px; background:var(--accent); border-radius:50%;}
+
+    /*  Cards  */
+    .card-image img {object-fit:cover;}
+  </style>
+</head>
+<body>
+  <!--  HERO HEADER  -->
+  <section class="hero is-light">
+    <div class="hero-body">
+      <div class="container is-flex is-align-items-center is-flex-wrap-wrap">
+        <figure class="image is-128x128 mr-5 mb-4">
+          <img class="is-rounded" src="images/zqy.jpg" alt="Qiyuan Zhang">
+        </figure>
+        <div>
+          <h1 class="title is-2 mb-1">Qiyuan Zhang</h1>
+          <p class="subtitle is-5 mb-4">Ph.D. Student, City University of Hong Kong</p>
+          <div class="buttons">
+            <a class="button is-link is-light" href="mailto:qiyuanzhang97@gmail.com">
+              <span class="icon"><i class="fas fa-envelope"></i></span><span>Email</span></a>
+            <a class="button is-dark is-light" href="https://scholar.google.com/citations?user=7LZAo0EAAAAJ">
+              <span class="icon"><i class="ai ai-google-scholar"></i></span><span>Scholar</span></a>
+            <a class="button is-dark is-light" href="cv/Qiyuan_CV.pdf">
+              <span class="icon"><i class="fas fa-file"></i></span><span>CV</span></a>
+            <a class="button is-light is-dark" href="https://x.com/Zh362783225">
+              <span class="icon"><i class="fab fa-twitter"></i></span><span>X/Twitter</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--  ABOUT  -->
+  <main class="section">
+    <div class="container content">
+      <h2 class="title is-4">About</h2>
+      <p>I am currently a third‑year Ph.D. student advised by <a href="https://kedema.org/">Prof.&nbsp;Kede&nbsp;Ma</a> and <a href="https://allenjack.github.io/">Prof.&nbsp;Chen&nbsp;Ma</a>. My research centers on <strong>auto‑evaluation, reward modeling, and test‑time scaling</strong> for large language models.</p>
+      <p>I&#39;m always open to collaboration or visiting opportunities—feel free to reach out!</p>
+
+      <h2 class="title is-4 mt-6">Current Research Areas</h2>
+      <ul>
+        <li>LLM‑as‑a‑Judge / Generative Reward Models</li>
+        <li>Methods for Test‑Time Scaling</li>
+        <li>Auto‑Benchmark Construction</li>
+      </ul>
+    </div>
+  </main>
+
+  <!--  NEWS TIMELINE  -->
+  <section class="section pt-0">
+    <div class="container">
+      <h2 class="title is-4">News</h2>
+      <ul class="timeline">
+        <li><span class="timeline-date">31 Mar 2025</span> &nbsp;Survey released: <em>A Survey on Test‑Time Scaling in LLMs</em></li>
+        <li><span class="timeline-date">21 Apr 2025</span> &nbsp;Paper accepted at PAKDD&nbsp;2025</li>
+        <li><span class="timeline-date">11 Feb 2025</span> &nbsp;Paper accepted at ICLR&nbsp;2025</li>
+        <li><span class="timeline-date">10 Oct 2024</span> &nbsp;Paper accepted at EMNLP&nbsp;2024</li>
+      </ul>
+    </div>
+  </section>
+
+  <!--  PUBLICATIONS  -->
+  <section class="section pt-0">
+    <div class="container">
+      <h2 class="title is-4">Selected Publications</h2>
+      <div class="columns is-multiline">
+        <!--  Paper 1  -->
+        <div class="column is-half">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="images/tts_survey.png" alt="TTS survey thumbnail">
+              </figure>
+            </div>
+            <div class="card-content">
+              <p class="title is-5">A Survey on Test‑Time Scaling in Large Language Models</p>
+              <p class="subtitle is-6">Zhang&nbsp;<em>et al.</em> · Preprint</p>
+              <div class="buttons">
+                <a class="button is-small is-dark" href="https://arxiv.org/abs/2503.24235"><span class="icon"><i class="ai ai-arxiv"></i></span><span>arXiv</span></a>
+                <a class="button is-small is-dark" href="https://github.com/testtimescaling/testtimescaling.github.io"><span class="icon"><i class="fab fa-github"></i></span><span>Code</span></a>
+                <a class="button is-small is-danger" href="slides/TTS_Survey.pptx"><span class="icon"><i class="fas fa-file-powerpoint"></i></span><span>PPT</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--  Paper 2  -->
+        <div class="column is-half">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="images/cce.png" alt="CCE thumbnail">
+              </figure>
+            </div>
+            <div class="card-content">
+              <p class="title is-5">Crowd Comparative Reasoning: Unlocking Comprehensive Evaluations for LLM‑as‑a‑Judge</p>
+              <p class="subtitle is-6">Zhang&nbsp;<em>et al.</em> · Under Review (ACL&nbsp;2025)</p>
+              <div class="buttons">
+                <a class="button is-small is-dark" href="https://arxiv.org/abs/2502.12501"><span class="icon"><i class="ai ai-arxiv"></i></span><span>arXiv</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--  Add more publications as needed  -->
+      </div>
+    </div>
+  </section>
+
+  <!--  SELECTED TALKS  -->
+  <section class="section pt-0">
+    <div class="container">
+      <h2 class="title is-4">Selected Talks</h2>
+      <div class="box has-text-centered">
+        <iframe width="560" height="315" src="https://www.bilibili.com/video/BV18QVbz7Eq4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!--  FOOTER  -->
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>© 2025 Qiyuan Zhang · Built with Bulma.</p>
+      <div style="transform:scale(.3); transform-origin:top right; display:inline-block;">
+        <script id="clstr_globe" src="//clustrmaps.com/globe.js?d=o3aDKg-dzAgCaVqKlRkdX5LRwuy706c8v2QUhUxbZNc"></script>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
