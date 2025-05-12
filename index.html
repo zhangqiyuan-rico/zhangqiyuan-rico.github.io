@@ -10,40 +10,44 @@
   <!--  Favicon  -->
   <link rel="icon" type="image/jpeg" href="/images/cityuhk.jpg"/>
 
-  <!--  Google Font  -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!--  Bulma CSS  -->
+  <!--  Fonts & Icons  -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/>
-
-  <!--  Font Awesome & Academicons  -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"/>
 
-  <!--  Custom variables + tweaks  -->
+  <!--  MathJax (needed for posts with equations)  -->
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!--  Google Analytics  -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116932893-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-116932893-1');
+  </script>
+
+  <!--  Custom styles  -->
   <style>
     :root {
-      --accent: #c0392b;          /* brand red */
-      --bg: #f9f9f9;              /* light gray background */
-      --text-dark: #222;
-      --text-light: #666;
+      --accent:#c0392b;
+      --bg:#f9f9f9;
+      --text-dark:#222;
     }
+    html {font-family:'Inter',system-ui,sans-serif; scroll-behavior:smooth;}
+    body {background:var(--bg); color:var(--text-dark);}  
 
-    html {font-family: 'Inter', system-ui, sans-serif; scroll-behavior:smooth;}
-    body {background: var(--bg); color: var(--text-dark);}  
+    /* Timeline */
+    .timeline{list-style:none;margin:0;padding-left:0;border-left:4px solid var(--accent);} 
+    .timeline li{position:relative;padding-left:1.25rem;margin-bottom:1rem;} 
+    .timeline li::before{content:'';position:absolute;left:-9px;top:6px;width:10px;height:10px;background:var(--accent);border-radius:50%;}
+    .timeline-date{font-weight:600;color:var(--accent);} 
 
-    /*  Timeline  */
-    .timeline {list-style:none; padding-left:0; border-left:4px solid var(--accent);}
-    .timeline li {position:relative; padding-left:1.25rem; margin-bottom:1rem;}
-    .timeline-date {font-weight:600; color:var(--accent);}   
-    .timeline li::before {content:''; position:absolute; left:-9px; top:6px; width:10px; height:10px; background:var(--accent); border-radius:50%;}
-
-    /*  Cards  */
-    .card-image img {object-fit:cover;}
+    /* Publication card thumbnails */
+    .card-image img{object-fit:cover;}
   </style>
 </head>
 <body>
-  <!--  HERO HEADER  -->
+  <!-- HERO -->
   <section class="hero is-light">
     <div class="hero-body">
       <div class="container is-flex is-align-items-center is-flex-wrap-wrap">
@@ -51,68 +55,62 @@
           <img class="is-rounded" src="images/zqy.jpg" alt="Qiyuan Zhang">
         </figure>
         <div>
-          <h1 class="title is-2 mb-1">Qiyuan Zhang</h1>
-          <p class="subtitle is-5 mb-4">Ph.D. Student, City University of Hong Kong</p>
+          <h1 class="title is-2 mb-1">Qiyuan Zhang</h1>
+          <p class="subtitle is-5 mb-3">Ph.D. Student · City University of Hong Kong</p>
           <div class="buttons">
-            <a class="button is-link is-light" href="mailto:qiyuanzhang97@gmail.com">
-              <span class="icon"><i class="fas fa-envelope"></i></span><span>Email</span></a>
-            <a class="button is-dark is-light" href="https://scholar.google.com/citations?user=7LZAo0EAAAAJ">
-              <span class="icon"><i class="ai ai-google-scholar"></i></span><span>Scholar</span></a>
-            <a class="button is-dark is-light" href="cv/Qiyuan_CV.pdf">
-              <span class="icon"><i class="fas fa-file"></i></span><span>CV</span></a>
-            <a class="button is-light is-dark" href="https://x.com/Zh362783225">
-              <span class="icon"><i class="fab fa-twitter"></i></span><span>X/Twitter</span></a>
+            <a class="button is-link is-light" href="mailto:qiyuanzhang97@gmail.com"><span class="icon"><i class="fas fa-envelope"></i></span><span>Email</span></a>
+            <a class="button is-dark is-light" href="https://scholar.google.com/citations?user=7LZAo0EAAAAJ"><span class="icon"><i class="ai ai-google-scholar"></i></span><span>Scholar</span></a>
+            <a class="button is-dark is-light" href="https://www.linkedin.com/in/qiyuan-zhang-032358330/"><span class="icon"><i class="fab fa-linkedin"></i></span><span>LinkedIn</span></a>
+            <a class="button is-dark is-light" href="https://x.com/Zh362783225"><span class="icon"><i class="fab fa-twitter"></i></span><span>X / Twitter</span></a>
+            <a class="button is-dark is-light" href="cv/Qiyuan_CV.pdf"><span class="icon"><i class="fas fa-file"></i></span><span>CV</span></a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!--  ABOUT  -->
-  <main class="section">
+  <!-- ABOUT -->
+  <main class="section pt-6">
     <div class="container content">
-      <h2 class="title is-4">About</h2>
-      <p>I am currently a third‑year Ph.D. student advised by <a href="https://kedema.org/">Prof.&nbsp;Kede&nbsp;Ma</a> and <a href="https://allenjack.github.io/">Prof.&nbsp;Chen&nbsp;Ma</a>. My research centers on <strong>auto‑evaluation, reward modeling, and test‑time scaling</strong> for large language models.</p>
-      <p>I&#39;m always open to collaboration or visiting opportunities—feel free to reach out!</p>
+      <p>I am currently a third‑year Ph.D. student advised by <a href="https://kedema.org/">Prof.&nbsp;Kede Ma</a> and <a href="https://allenjack.github.io/">Prof.&nbsp;Chen Ma</a>. Previously, I completed my B.Sc. and M.Sc. in Computer Science at the University of Electronic Science and Technology of China and spent time at Singapore Management University working with Jing Jiang. Soon, I will join <a href="https://mbzuai.ac.ae/study/faculty/steve-liu/">Prof.&nbsp;Xue Liu</a>’s group at MBZUAI as a visiting student.</p>
+      <p>My research interests lie in <strong>auto‑evaluation, reward modeling, and improved scaling strategies such as test‑time scaling</strong> for large language models. I am always open to collaborations—feel free to reach out!</p>
+      <p><strong>Currently seeking visiting or research‑intern opportunities</strong> to further explore frontier research topics.</p>
 
       <h2 class="title is-4 mt-6">Current Research Areas</h2>
       <ul>
-        <li>LLM‑as‑a‑Judge / Generative Reward Models</li>
-        <li>Methods for Test‑Time Scaling</li>
-        <li>Auto‑Benchmark Construction</li>
+        <li>LLM‑as‑a‑Judge / Generative Reward Models</li>
+        <li>Methods for Test‑Time Scaling</li>
+        <li>Automatic Benchmark Construction</li>
       </ul>
     </div>
   </main>
 
-  <!--  NEWS TIMELINE  -->
+  <!-- NEWS -->
   <section class="section pt-0">
     <div class="container">
       <h2 class="title is-4">News</h2>
       <ul class="timeline">
-        <li><span class="timeline-date">31 Mar 2025</span> &nbsp;Survey released: <em>A Survey on Test‑Time Scaling in LLMs</em></li>
-        <li><span class="timeline-date">21 Apr 2025</span> &nbsp;Paper accepted at PAKDD&nbsp;2025</li>
-        <li><span class="timeline-date">11 Feb 2025</span> &nbsp;Paper accepted at ICLR&nbsp;2025</li>
-        <li><span class="timeline-date">10 Oct 2024</span> &nbsp;Paper accepted at EMNLP&nbsp;2024</li>
+        <li><span class="timeline-date">31 Mar 2025</span>  Survey released: <em>A Survey on Test‑Time Scaling …</em></li>
+        <li><span class="timeline-date">21 Apr 2025</span>  Paper accepted at PAKDD 2025</li>
+        <li><span class="timeline-date">11 Feb 2025</span>  Paper accepted at ICLR 2025</li>
+        <li><span class="timeline-date">10 Oct 2024</span>  Paper accepted at EMNLP 2024</li>
       </ul>
     </div>
   </section>
 
-  <!--  PUBLICATIONS  -->
+  <!-- PUBLICATIONS -->
   <section class="section pt-0">
     <div class="container">
       <h2 class="title is-4">Selected Publications</h2>
       <div class="columns is-multiline">
-        <!--  Paper 1  -->
+
+        <!-- Paper 1 -->
         <div class="column is-half">
           <div class="card">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <img src="images/tts_survey.png" alt="TTS survey thumbnail">
-              </figure>
-            </div>
+            <div class="card-image"><figure class="image is-4by3"><img src="images/tts_survey.png" alt="TTS Survey"></figure></div>
             <div class="card-content">
               <p class="title is-5">A Survey on Test‑Time Scaling in Large Language Models</p>
-              <p class="subtitle is-6">Zhang&nbsp;<em>et al.</em> · Preprint</p>
+              <p class="subtitle is-6">Zhang <em>et al.</em> · Preprint</p>
               <div class="buttons">
                 <a class="button is-small is-dark" href="https://arxiv.org/abs/2503.24235"><span class="icon"><i class="ai ai-arxiv"></i></span><span>arXiv</span></a>
                 <a class="button is-small is-dark" href="https://github.com/testtimescaling/testtimescaling.github.io"><span class="icon"><i class="fab fa-github"></i></span><span>Code</span></a>
@@ -122,17 +120,13 @@
           </div>
         </div>
 
-        <!--  Paper 2  -->
+        <!-- Paper 2 -->
         <div class="column is-half">
           <div class="card">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <img src="images/cce.png" alt="CCE thumbnail">
-              </figure>
-            </div>
+            <div class="card-image"><figure class="image is-4by3"><img src="images/cce.png" alt="CCE"></figure></div>
             <div class="card-content">
-              <p class="title is-5">Crowd Comparative Reasoning: Unlocking Comprehensive Evaluations for LLM‑as‑a‑Judge</p>
-              <p class="subtitle is-6">Zhang&nbsp;<em>et al.</em> · Under Review (ACL&nbsp;2025)</p>
+              <p class="title is-5">Crowd Comparative Reasoning: Unlocking Comprehensive Evaluations for LLM‑as‑a‑Judge</p>
+              <p class="subtitle is-6">Zhang <em>et al.</em> · Under Review (ACL 2025)</p>
               <div class="buttons">
                 <a class="button is-small is-dark" href="https://arxiv.org/abs/2502.12501"><span class="icon"><i class="ai ai-arxiv"></i></span><span>arXiv</span></a>
               </div>
@@ -140,26 +134,83 @@
           </div>
         </div>
 
-        <!--  Add more publications as needed  -->
+        <!-- Paper 3 -->
+        <div class="column is-half">
+          <div class="card">
+            <div class="card-image"><figure class="image is-4by3"><img src="images/reviseval.png" alt="RevisEval"></figure></div>
+            <div class="card-content">
+              <p class="title is-5">RevisEval: Improving LLM‑as‑a‑Judge via Response‑Adapted References</p>
+              <p class="subtitle is-6">Zhang <em>et al.</em> · ICLR 2024</p>
+              <div class="buttons">
+                <a class="button is-small is-dark" href="https://arxiv.org/abs/2410.05193"><span class="icon"><i class="ai ai-arxiv"></i></span><span>arXiv</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Paper 4 -->
+        <div class="column is-half">
+          <div class="card">
+            <div class="card-image"><figure class="image is-4by3"><img src="images/cpp.png" alt="CPP"></figure></div>
+            <div class="card-content">
+              <p class="title is-5">Collaborative Performance Prediction for Large Language Models</p>
+              <p class="subtitle is-6">Zhang <em>et al.</em> · EMNLP 2024</p>
+              <div class="buttons">
+                <a class="button is-small is-dark" href="https://arxiv.org/abs/2407.01300"><span class="icon"><i class="ai ai-arxiv"></i></span><span>arXiv</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Paper 5 -->
+        <div class="column is-half">
+          <div class="card">
+            <div class="card-image"><figure class="image is-4by3"><img src="/images/noahqa.png" alt="NOAHQA"></figure></div>
+            <div class="card-content">
+              <p class="title is-5">NOAHQA: Numerical Reasoning with Interpretable Graph QA Dataset</p>
+              <p class="subtitle is-6">Zhang <em>et al.</em> · EMNLP 2021 Findings</p>
+              <div class="buttons">
+                <a class="button is-small is-dark" href="https://arxiv.org/abs/2109.10604"><span class="icon"><i class="ai ai-arxiv"></i></span><span>arXiv</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Paper 6 -->
+        <div class="column is-half">
+          <div class="card">
+            <div class="card-image"><figure class="image is-4by3"><img src="images/toolkit.png" alt="MWPToolkit"></figure></div>
+            <div class="card-content">
+              <p class="title is-5">MWPToolkit: An Open‑Source Framework for DL‑Based Math Word Problem Solvers</p>
+              <p class="subtitle is-6">Lan, Zhang <em>et al.</em> · AAAI 2021 Workshop</p>
+              <div class="buttons">
+                <a class="button is-small is-dark" href="https://arxiv.org/abs/2109.00799"><span class="icon"><i class="ai ai-arxiv"></i></span><span>arXiv</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!--  SELECTED TALKS  -->
+  <!-- SELECTED TALKS -->
   <section class="section pt-0">
     <div class="container">
       <h2 class="title is-4">Selected Talks</h2>
       <div class="box has-text-centered">
-        <iframe width="560" height="315" src="https://www.bilibili.com/video/BV18QVbz7Eq4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="video-container" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+          <iframe src="https://www.bilibili.com/video/BV18QVbz7Eq4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%"></iframe>
+        </div>
       </div>
     </div>
   </section>
 
-  <!--  FOOTER  -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="content has-text-centered">
-      <p>© 2025 Qiyuan Zhang · Built with Bulma.</p>
-      <div style="transform:scale(.3); transform-origin:top right; display:inline-block;">
+      <p>© 2025 Qiyuan Zhang · Built with Bulma.</p>
+      <div style="transform:scale(.3);transform-origin:top right;display:inline-block;">
         <script id="clstr_globe" src="//clustrmaps.com/globe.js?d=o3aDKg-dzAgCaVqKlRkdX5LRwuy706c8v2QUhUxbZNc"></script>
       </div>
     </div>
