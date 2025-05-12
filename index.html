@@ -27,26 +27,30 @@
   </script>
 
   <!--  Custom styles  -->
- <style>
-    /* --- Override hero subtitle margin to prevent overlap --- */
-    .hero .subtitle {margin-top:0.25rem!important;}
-    :root {
-      --accent:#c0392b;
-      --bg:#f9f9f9;
-      --text-dark:#222;
-    }
-    html {font-family:'Inter',system-ui,sans-serif; scroll-behavior:smooth;}
-    body {background:var(--bg); color:var(--text-dark);}  
+<style>
+  /* Keep existing styles ... */
+  .hero .subtitle {margin-top:0.25rem!important;}
+  :root {
+    --accent:#c0392b;
+    --bg:#f9f9f9;
+    --text-dark:#222;
+  }
+  html {font-family:'Inter',system-ui,sans-serif; scroll-behavior:smooth;}
+  body {background:var(--bg); color:var(--text-dark);}  
 
-    /* Timeline */
-    .timeline{list-style:none;margin:0;padding-left:0;border-left:4px solid var(--accent);} 
-    .timeline li{position:relative;padding-left:1.25rem;margin-bottom:1rem;} 
-    .timeline li::before{content:'';position:absolute;left:-9px;top:6px;width:10px;height:10px;background:var(--accent);border-radius:50%;}
-    .timeline-date{font-weight:600;color:var(--accent);} 
+  .timeline {list-style:none;margin:0;padding-left:0;border-left:4px solid var(--accent);} 
+  .timeline li {position:relative;padding-left:1.25rem;margin-bottom:1rem;} 
+  .timeline li::before {content:'';position:absolute;left:-9px;top:6px;width:10px;height:10px;background:var(--accent);border-radius:50%;}
+  .timeline-date {font-weight:600;color:var(--accent);} 
+  .card-image img {object-fit:cover;}
 
-    /* Publication card thumbnails */
-    .card-image img{object-fit:cover;}
-  </style>
+  /* ✨ Center page content and limit max width */
+  .container {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
 </head>
 <body>
   <!-- HERO -->
